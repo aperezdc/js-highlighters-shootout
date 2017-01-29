@@ -26,7 +26,11 @@ The following have been left out:
 
 -    [Colocodo](https://github.com/switer/colocodo): Assumes that `document` is
      defined and only works in the browser.
+-    [EnlighterJS](https://www.npmjs.com/package/enlighterjs): Seems to assume
+     that it will run in a browser.
 -    [Microlight](https://asvd.github.io/microlight): Assumes that `window` and
      `document` are defined and onl works in the browser.
 -    [SyntaxHighlighter](https://github.com/syntaxhighlighter): Does not work
      directly with NodeJS, even with `--harmony` due to usage of modules.
+
+If you can figure out how to benchmark these, PRs for adding them are welcome.
