@@ -1,6 +1,17 @@
 JS Syntax Highlighters Shootout
 ===============================
 
+Running
+-------
+
+```sh
+npm install
+node bench.js
+```
+
+Highlighters
+------------
+
 This is a benchmark for the following syntax highlighters:
 
 -    [Highlight.js](https://highlightjs.org/)
