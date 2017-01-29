@@ -26,5 +26,7 @@ The following have been left out:
 
 -    [Colocodo](https://github.com/switer/colocodo): Assumes that `document` is
      defined and only works in the browser.
+-    [Microlight](https://asvd.github.io/microlight): Assumes that `window` and
+     `document` are defined and onl works in the browser.
 -    [SyntaxHighlighter](https://github.com/syntaxhighlighter): Does not work
      directly with NodeJS, even with `--harmony` due to usage of modules.
