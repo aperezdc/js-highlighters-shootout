@@ -17,8 +17,10 @@ const inputs = {
 
 const codeMirror = require('codemirror-highlight');
 codeMirror.loadMode('javascript');
-codeMirror.loadMode('htmlmixed');
 codeMirror.loadMode('css');
+codeMirror.loadMode('xml');  // Needed for HTML support.
+codeMirror.loadMode('vbscript'); //  …ditto.
+codeMirror.loadMode('htmlmixed');
 const codeMirrorMode = { html: 'htmlmixed', js: 'javascript', css: 'css' };
 
 const rainbowCode = require('rainbow-code').colorSync;
