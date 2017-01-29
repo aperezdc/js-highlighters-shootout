@@ -24,5 +24,7 @@ This is a benchmark for the following syntax highlighters:
 
 The following have been left out:
 
+-    [Colocodo](https://github.com/switer/colocodo): Assumes that `document` is
+     defined and only works in the browser.
 -    [SyntaxHighlighter](https://github.com/syntaxhighlighter): Does not work
      directly with NodeJS, even with `--harmony` due to usage of modules.
