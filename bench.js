@@ -15,6 +15,12 @@ const inputs = {
 	html: fs.readFileSync('inputs/test.html').toString(),
 };
 
+const codeMirror = require('codemirror-highlight');
+codeMirror.loadMode('javascript');
+codeMirror.loadMode('htmlmixed');
+codeMirror.loadMode('css');
+const codeMirrorMode = { html: 'htmlmixed', js: 'javascript', css: 'css' };
+
 const rainbowCode = require('rainbow-code').colorSync;
 const highlightjs = require('highlight.js').highlight;
 const Highlights = require('highlights');
@@ -31,6 +37,8 @@ const highlighters = {
 			scopeName: 'test.' + syntax,
 		});
 	},
+	codeMirrorHighlight: (syntax, input) =>
+		codeMirror.highlight(input, { mode: codeMirrorMode[syntax] }),
 	rainbowCode: (syntax, input) =>
 		rainbowCode(input, (syntax === 'js') ? 'javascript' : syntax),
 	sublemon: (syntax, input) =>

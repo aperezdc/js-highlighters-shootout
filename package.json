@@ -1,6 +1,7 @@
 {
   "devDependencies": {
     "benchmark": "^2.1.3",
+    "codemirror-highlight": "^1.1.1",
     "highlight.js": "^9.9.0",
     "highlights": "^2.1.1",
     "microtime": "^2.1.2",
