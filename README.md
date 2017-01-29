@@ -30,6 +30,8 @@ The following have been left out:
      that it will run in a browser.
 -    [Microlight](https://asvd.github.io/microlight): Assumes that `window` and
      `document` are defined and onl works in the browser.
+-    [Prettify](https://github.com/google/code-prettify): Does not seem to work
+     outside the browser.
 -    [SyntaxHighlighter](https://github.com/syntaxhighlighter): Does not work
      directly with NodeJS, even with `--harmony` due to usage of modules.
 
