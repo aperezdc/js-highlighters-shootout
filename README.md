@@ -14,9 +14,11 @@ Highlighters
 
 This is a benchmark for the following syntax highlighters:
 
+-    [codemirror-highlight](https://github.com/curvedmark/codemirror-highlight)
 -    [Highlight.js](https://highlightjs.org/)
 -    [Highlights](https://github.com/atom/highlights)
 -    [Prism](http://prismjs.com/)
+-    [RainbowCode](http://rainbowco.de/)
 -    [Sublemon](https://github.com/lemonce/sublemon)
 
 The following have been left out:
