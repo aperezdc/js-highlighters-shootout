@@ -23,6 +23,7 @@ const codeMirrorMode = { html: 'htmlmixed', js: 'javascript', css: 'css' };
 
 const rainbowCode = require('rainbow-code').colorSync;
 const highlightjs = require('highlight.js').highlight;
+const illuminate = require('illuminate-js').highlight;
 const Highlights = require('highlights');
 const sublemon = require('sublemon');
 const prismjs = require('prismjs');
@@ -37,6 +38,8 @@ const highlighters = {
 			scopeName: 'test.' + syntax,
 		});
 	},
+	illuminate: (syntax, input) =>
+		illuminate(input, syntax),
 	codeMirrorHighlight: (syntax, input) =>
 		codeMirror.highlight(input, { mode: codeMirrorMode[syntax] }),
 	rainbowCode: (syntax, input) =>

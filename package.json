@@ -4,6 +4,7 @@
     "codemirror-highlight": "^1.1.1",
     "highlight.js": "^9.9.0",
     "highlights": "^2.1.1",
+    "illuminate-js": "^0.3.0",
     "microtime": "^2.1.2",
     "prismjs": "^1.6.0",
     "rainbow-code": "^2.1.2",
