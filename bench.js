@@ -16,11 +16,22 @@ const inputs = {
 };
 
 const highlightjs = require('highlight.js').highlight;
+const Highlights = require('highlights');
+const sublemon = require('sublemon');
 const prismjs = require('prismjs');
 
 const highlighters = {
 	highlightJs: (syntax, input) =>
 		highlightjs(syntax, input, true).value,
+	highlights: (syntax, input) => {
+		const hl = new Highlights();
+		return hl.highlightSync({
+			fileContents: input,
+			scopeName: 'test.' + syntax,
+		});
+	},
+	sublemon: (syntax, input) =>
+		sublemon(input),
 	prismJs: (syntax, input) =>
 		prismjs.highlight(input, prismjs.languages[syntax]),
 }
@@ -36,6 +47,6 @@ for (const input_name in inputs) {
 		suite.add(hl_name, () => hl_func(input_name, input));
 	}
 	suite.on('cycle', function (ev) { console.log(String(ev.target)) })
-	     .on('complete', function() { console.log(' * Fastest:', this.filter('fastest').map('name')[0]) })
+	     .on('complete', function() { console.log(' - Fastest:', this.filter('fastest').map('name')[0]) })
 	     .run();
 }
