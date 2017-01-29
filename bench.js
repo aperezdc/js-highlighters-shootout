@@ -15,6 +15,7 @@ const inputs = {
 	html: fs.readFileSync('inputs/test.html').toString(),
 };
 
+const rainbowCode = require('rainbow-code').colorSync;
 const highlightjs = require('highlight.js').highlight;
 const Highlights = require('highlights');
 const sublemon = require('sublemon');
@@ -30,6 +31,8 @@ const highlighters = {
 			scopeName: 'test.' + syntax,
 		});
 	},
+	rainbowCode: (syntax, input) =>
+		rainbowCode(input, (syntax === 'js') ? 'javascript' : syntax),
 	sublemon: (syntax, input) =>
 		sublemon(input),
 	prismJs: (syntax, input) =>

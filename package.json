@@ -5,6 +5,7 @@
     "highlights": "^2.1.1",
     "microtime": "^2.1.2",
     "prismjs": "^1.6.0",
+    "rainbow-code": "^2.1.2",
     "sublemon": "^1.1.1"
   }
 }
