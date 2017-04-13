@@ -3,7 +3,7 @@
     "benchmark": "^2.1.3",
     "codemirror-highlight": "^1.1.1",
     "highlight.js": "^9.9.0",
-    "highlights": "^2.1.1",
+    "highlights": "^3.0.0",
     "illuminate-js": "^0.3.0",
     "microtime": "^2.1.2",
     "prismjs": "^1.6.0",
