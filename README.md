@@ -19,7 +19,6 @@ This is a benchmark for the following syntax highlighters:
 -    [Highlights](https://github.com/atom/highlights)
 -    [Illuminate](https://vkbansal.github.io/illuminate-js/)
 -    [Prism](http://prismjs.com/)
--    [RainbowCode](http://rainbowco.de/)
 -    [Sublemon](https://github.com/lemonce/sublemon)
 
 The following have been left out:
@@ -29,9 +28,11 @@ The following have been left out:
 -    [EnlighterJS](https://www.npmjs.com/package/enlighterjs): Seems to assume
      that it will run in a browser.
 -    [Microlight](https://asvd.github.io/microlight): Assumes that `window` and
-     `document` are defined and onl works in the browser.
+     `document` are defined and only works in the browser.
 -    [Prettify](https://github.com/google/code-prettify): Does not seem to work
      outside the browser.
+-    [RainbowCode](http://rainbowco.de/): Does not work anymore with recent
+     NodeJS versions.
 -    [SyntaxHighlighter](https://github.com/syntaxhighlighter): Does not work
      directly with NodeJS, even with `--harmony` due to usage of modules.
 

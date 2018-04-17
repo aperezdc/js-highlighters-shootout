@@ -23,12 +23,18 @@ codeMirror.loadMode('vbscript'); //  …ditto.
 codeMirror.loadMode('htmlmixed');
 const codeMirrorMode = { html: 'htmlmixed', js: 'javascript', css: 'css' };
 
-const rainbowCode = require('rainbow-code').colorSync;
 const highlightjs = require('highlight.js').highlight;
 const illuminate = require('illuminate-js').highlight;
 const Highlights = require('highlights');
 const sublemon = require('sublemon');
 const prismjs = require('prismjs');
+
+if (true) {
+	let addLanguage = require('illuminate-js').addLanguage;
+	addLanguage('js', require('illuminate-js/lib/languages').javascript);
+	addLanguage('html', require('illuminate-js/lib/languages').html);
+	addLanguage('css', require('illuminate-js/lib/languages').css);
+}
 
 const highlighters = {
 	highlightJs: (syntax, input) =>
@@ -44,8 +50,6 @@ const highlighters = {
 		illuminate(input, syntax),
 	codeMirrorHighlight: (syntax, input) =>
 		codeMirror.highlight(input, { mode: codeMirrorMode[syntax] }),
-	rainbowCode: (syntax, input) =>
-		rainbowCode(input, (syntax === 'js') ? 'javascript' : syntax),
 	sublemon: (syntax, input) =>
 		sublemon(input),
 	prismJs: (syntax, input) =>
