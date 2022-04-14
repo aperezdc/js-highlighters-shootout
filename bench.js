@@ -38,7 +38,7 @@ if (true) {
 
 const highlighters = {
 	highlightJs: (syntax, input) =>
-		highlightjs(syntax, input, true).value,
+		highlightjs(input, {language: syntax}).value,
 	highlights: (syntax, input) => {
 		const hl = new Highlights();
 		return hl.highlightSync({
